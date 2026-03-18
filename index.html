@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon_io/favicon.ico?v=2" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png?v=2" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png?v=2" />
+    <link rel="apple-touch-icon" href="/favicon_io/apple-touch-icon.png?v=2" />
+    <link rel="manifest" href="/favicon_io/site.webmanifest?v=2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math Games | Kokoro Tutoring</title>
+    <style>
+      :root {
+        --black: #1a1a1a;
+        --purple: #29182c;
+        --dkgreen: #023c3d;
+        --mint: #c3e4da;
+        --ltgray: #e6e6e6;
+        --orange: #e23f1a;
+        --peach: #ffcbba;
+        --cardBorder: rgba(2,60,61,0.18);
+        --shadow: 0 12px 24px rgba(0,0,0,0.10);
+      }
+
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+
+      body {
+        min-height: 100vh;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        background: linear-gradient(180deg, var(--mint) 0%, var(--ltgray) 100%);
+        color: var(--black);
+        padding: 22px;
+      }
+
+      .centerTop {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 24px;
+        gap: 10px;
+      }
+
+      .logoTop {
+        height: 54px;
+        width: auto;
+        display: block;
+      }
+
+      .pageTitle {
+        font-weight: 1000;
+        font-size: 22px;
+        color: var(--dkgreen);
+        text-align: center;
+      }
+
+      .sub {
+        color: rgba(26,26,26,0.75);
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .gamesGrid {
+        max-width: 680px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+
+      .gameCard {
+        background: rgba(255,255,255,0.72);
+        border: 1px solid var(--cardBorder);
+        border-radius: 16px;
+        padding: 28px 20px;
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(6px);
+        text-align: center;
+        text-decoration: none;
+        color: var(--black);
+        transition: transform 120ms ease, box-shadow 120ms ease;
+      }
+
+      .gameCard:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 16px 32px rgba(0,0,0,0.14);
+      }
+
+      .gameCard:active {
+        transform: translateY(0);
+      }
+
+      .gameIcon {
+        font-size: 48px;
+        margin-bottom: 12px;
+      }
+
+      .gameName {
+        font-weight: 1000;
+        font-size: 18px;
+        color: var(--dkgreen);
+        margin-bottom: 6px;
+      }
+
+      .gameDesc {
+        font-size: 13px;
+        color: rgba(26,26,26,0.65);
+        font-weight: 700;
+        line-height: 1.4;
+      }
+
+      .hint {
+        margin-top: 24px;
+        color: rgba(26,26,26,0.55);
+        font-size: 13px;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      @media (max-width: 420px) {
+        .centerTop {
+          margin-top: 0;
+          margin-bottom: 16px;
+          gap: 6px;
+        }
+
+        .logoTop {
+          height: 22px;
+          margin-top: -2px;
+          margin-bottom: 0;
+        }
+
+        .pageTitle {
+          font-size: 18px;
+        }
+
+        .gamesGrid {
+          grid-template-columns: 1fr;
+          gap: 12px;
+        }
+
+        .gameCard {
+          padding: 22px 16px;
+        }
+
+        .gameIcon {
+          font-size: 40px;
+        }
+      }
+
+      @media (max-width: 375px) {
+        body { padding: 12px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="centerTop">
+      <img class="logoTop" src="/kokoro-logo.png" alt="Kokoro Tutoring" />
+      <div class="pageTitle">Math Games</div>
+    </div>
+
+    <p class="sub">Pick a game to practice.</p>
+
+    <div class="gamesGrid">
+      <a class="gameCard" href="https://multiply.kokorotutoring.com">
+        <div class="gameIcon">✕</div>
+        <div class="gameName">Multiplication Memory</div>
+        <div class="gameDesc">Master your times tables from 0 to 12.</div>
+      </a>
+
+      <a class="gameCard" href="https://divide.kokorotutoring.com">
+        <div class="gameIcon">÷</div>
+        <div class="gameName">Division Memory</div>
+        <div class="gameDesc">Master your division facts from 1 to 12.</div>
+      </a>
+    </div>
+
+    <p class="hint">No login required. Progress resets after 24 hours.</p>
+  </body>
+</html>
